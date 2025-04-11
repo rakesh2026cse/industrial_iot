@@ -1,0 +1,7 @@
+Flask
+dash
+plotly
+scikit-learn
+joblib
+pandas
+numpy

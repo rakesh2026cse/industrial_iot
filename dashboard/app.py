@@ -11,8 +11,6 @@ server = Flask(__name__)
 @server.route("/")
 def home():
     return render_template("index.html")
-
-# Dash dashboard
 app = dash.Dash(__name__, server=server, routes_pathname_prefix='/dashboard/')
 
 def get_plot_data():
@@ -24,7 +22,7 @@ def get_plot_data():
     return timestamps, temps, vibs, press
 
 app.layout = html.Div(children=[
-    html.H1("🏭 Industrial Machine Monitoring Dashboard"),
+    html.H1(" Industrial Machine Monitoring Dashboard"),
     dcc.Interval(id='interval-component', interval=5*1000, n_intervals=0),
 
     dcc.Graph(id='live-graph'),

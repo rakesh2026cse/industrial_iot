@@ -26,5 +26,5 @@ def fetch_recent_data(limit=100):
     c.execute("SELECT * FROM sensor_data ORDER BY id DESC LIMIT ?", (limit,))
     data = c.fetchall()
     conn.close()
-    return data[::-1]  # return in chronological order
+    return data[::-1]  
 
